@@ -1,0 +1,221 @@
+.search-donors {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.search-donors h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.search-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-btn {
+  background: linear-gradient(135deg, var(--primary-color), #ff6b6b);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 77, 77, 0.2);
+}
+
+.search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 77, 77, 0.3);
+}
+
+.search-results {
+  margin-top: 3rem;
+}
+
+.search-results h2 {
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.search-results h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.donor-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.donor-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.donor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+
+.donor-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.donor-card-header h3 {
+  color: var(--secondary-color);
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.availability-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.availability-badge.available {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: var(--success-color);
+}
+
+.availability-badge.available::before {
+  content: '●';
+  color: var(--success-color);
+}
+
+.availability-badge.not-available {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: var(--danger-color);
+}
+
+.availability-badge.not-available::before {
+  content: '●';
+  color: var(--danger-color);
+}
+
+.donor-info {
+  margin-bottom: 1.5rem;
+}
+
+.donor-info p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.donor-info p strong {
+  color: var(--secondary-color);
+  min-width: 120px;
+}
+
+.donor-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-btn, .message-btn {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.contact-btn {
+  background: linear-gradient(135deg, var(--primary-color), #ff6b6b);
+  color: white;
+  box-shadow: 0 2px 4px rgba(255, 77, 77, 0.2);
+}
+
+.message-btn {
+  background: linear-gradient(135deg, var(--secondary-color), #34495e);
+  color: white;
+  box-shadow: 0 2px 4px rgba(44, 62, 80, 0.2);
+}
+
+.contact-btn:hover, .message-btn:hover {
+  transform: translateY(-2px);
+}
+
+.contact-btn:hover {
+  box-shadow: 0 4px 8px rgba(255, 77, 77, 0.3);
+}
+
+.message-btn:hover {
+  box-shadow: 0 4px 8px rgba(44, 62, 80, 0.3);
+}
+
+@media (max-width: 768px) {
+  .search-donors {
+    padding: 1rem;
+  }
+
+  .search-donors h1 {
+    font-size: 2rem;
+  }
+
+  .search-form {
+    padding: 1.5rem;
+  }
+
+  .donor-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .donor-card {
+    padding: 1.5rem;
+  }
+
+  .donor-card-actions {
+    grid-template-columns: 1fr;
+  }
+} 
